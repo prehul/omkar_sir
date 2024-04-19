@@ -1,0 +1,162 @@
+Feature selection analysis
+1) Variance threshold method
+2) Mutual info classify
+3) P-value
+4) Forward selection and backward selection
+5) Correlation with target 
+
+============== Variance threshold method ================
+1) we have  data has constant values : variance=0
+   we are droping these type of columns
+
+2) Mutaual info clasify:
+    
+       It will explain about the relation between input and output
+       a) KNN 
+       b) entropy
+   
+    Input vs Output
+    1) Information gain : 
+    2) KNN : 
+    3) Rsquare and adjsuted R-square
+         The exaplainability about Y based on x
+
+3) Forward selection and backward selection
+   
+      Tv   Np    Sm     Sales
+     sales= bo+b1*TV ========== > Rsq /adj   80
+     sales = bo+b1*Tv+b2*Sm ==== >           85
+
+     sales= bo+b1*Tv+b2*Sm+b3*Np  ==== Rsquare
+     sales= bo+b1*Tv+b2*Sm
+
+4) P-value
+
+    Ho:  There is no realtion between X and Y
+    H1:  There is a relation between  X and y
+  P<0.05   you reject the null hypothesis
+  which variable has  p<0.05   that variable will be included
+
+5) Correlation:
+
+      Will get correlation between all the variable
+      we need to avoid the relation among input variables
+      we need relation between input and output 
+
+
+
+
+
+=============================================================
+Step-1: Import the packages
+Step-2: Read the data
+Step-3: EDA
+
+        1) Missing value analysis
+                - drop
+                - mean/median/mode
+                - bfill
+                - ffill
+                - comapare two variable we can fill the values
+
+       2) Outlier analysis:
+                - Box plot How many outliers are there
+                - Fill the outliers medain value
+                - Fill the outliers q3 or q1
+       3) Numerical data analysis: data is skewed 
+          Data transformation techqniues:
+               - Log transformation
+               - Exponential transformation
+               - Reciprocal transformation
+	       - square root transformation
+               - power 
+       4) Bi variate analysis 
+               - Understanding of more about data
+               - good way to do missing values/ outliers
+
+       5) Correlation for only numerical data
+
+       6) Convert cat to numerical
+               - maping manually
+               - pd.get dummies :  One hot encoder
+                     adv: variables become independent
+                     dis: data becomes sparse
+                          curse of dimensionality
+               - LabelEncoder
+
+       7) Standardize the data or Normalize the data  
+        
+       8) Feature selection (optional)
+       
+       9) Principle component analysis (PCA) (Optional)
+
+Step-4: Divide the data into input and output
+Step-5: Divide the data into train test split
+Step-6: Develop the ML model using X_train, y_train
+Step-7: Pass the X_test data to the model, y_pred
+Step-8: Compare y_test with y_pred
+Step-9: Evaluation Metrics
+Step-10: Hyper parameter tuning
+          - will change the model parameter to increase the performance
+          - feature selection to increase the model performance
+          - PCA 
+
+Step-11:  Saving of the model  .pkl  and .joblib
+Step-12:  Load the model and pass the test cases
+Step-13:  Deploy the model/ API / Application 
+
+
+
+
+In Mutual info classify ==== realtion between input output
+
+you got array of values [v1,v2,v3,v4,......v11]
+
+pd.Series(values)
+
+0   v1
+1   v2
+2   v3
+
+11  v11
+
+col1  v1
+col2  v2
+
+sorted : top 5 columns
+
+selectKBest ====== k =5  top 5 columns 
+
+
+
+I will share one data set : EDA
+ready with Numerical data
+Classification model tomorrow
+
+Till 5 steps you need to do
+real time project :  Hurdles 
+
+
+Churn reason            Churn status 
+  service is good     He churned
+
+Mode: service good
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   

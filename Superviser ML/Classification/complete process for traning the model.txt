@@ -1,0 +1,56 @@
+Step-1: Import the packages
+Step-2: Read the data
+Step-3: EDA
+
+        1) Missing value analysis
+                - drop
+                - mean/median/mode
+                - bfill
+                - ffill
+                - compare two variable we can fill the values
+
+       2) Outlier analysis:
+                - Box plot How many outliers are there
+                - Fill the outliers median value
+                - Fill the outliers q3 or q1
+       3) Numerical data analysis: data is skewed
+          Data transformation techniques:
+               - Log transformation
+               - Exponential transformation
+               - Reciprocal transformation
+           - square root transformation
+               - power
+       4) Bi variate analysis
+               - Understanding of more about data
+               - good way to do missing values/ outliers
+
+       5) Correlation for only numerical data
+
+       6) Convert cat to numerical
+               - mapping manually
+               - pd.get dummies :  One hot encoder
+                     adv: variables become independent
+                     dis: data becomes sparse
+                          curse of dimensionality
+               - Label Encoder
+
+       7) Standardize the data or Normalize the data  
+       
+       8) Feature selection (optional)
+       
+       9) Principle component analysis (PCA) (Optional)
+
+Step-4: Divide the data into input and output
+Step-5: Divide the data into train test split
+Step-6: Develop the ML model using X_train, y_train
+Step-7: Pass the X_test data to the model, y_pred
+Step-8: Compare y_test with y_pred
+Step-9: Evaluation Metrics
+Step-10: Hyper parameter tuning
+          - will change the model parameter to increase the performance
+          - feature selection to increase the model performance
+          - PCA
+
+Step-11:  Saving of the model  .pkl  and .joblib
+Step-12:  Load the model and pass the test cases
+Step-13:  Deploy the model/ API / Application

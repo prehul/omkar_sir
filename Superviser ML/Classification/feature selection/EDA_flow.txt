@@ -1,0 +1,90 @@
+Thursday 28-12-2023 PPT
+
+I uploaded some datasets ==== > pick anyone
+
+==============Step-1: ==================
+1) Read the data
+2) Apply head=============> 5 rows
+     if it is not read properly
+     check: sep / header /encoding
+ 
+3) shape : rows x columns
+4) column data types ===== > cat and numerical
+5) info === screenshot ==== > observation
+
+================== Step-2 data cleaning================
+1) isnull : some missing values avialable
+            impute those vaulues
+            if that column has outlier : Median
+            if outliers are not there  : Mean
+            if cat column : Mode
+   **Note**: Do not consider ID columns
+
+2) any other cleaning process
+   suppose data type is object but by mistake 
+   you have seen some numbers 
+
+   1 2 3 4 <wrong imputation>
+   dependent is object ==== int 
+   type cast
+
+
+=============== STEP-3===================
+1) categorical data analysis
+2) unique
+3) nunique
+4) frequency table: value counts
+5) valu_counts(Normalize=True) : percentages
+6) bar plot / pie chart
+
+pics ==== ppt ==== observations
+use subplot conecpt while you do code
+
+================== STEP-4 =========================
+
+Numerical analysis
+1) All statistical measurements 
+   describe 
+2) histogram : observation  
+   Normal distribution is not following 
+   try apply transformations
+
+3) Outlier analysis:
+   -----------------------------------------
+   boxplot 1: before fill outliers (500)
+   -----------------------------------------
+   fill all outliers
+   boxplot 2: after fill outliers
+   -----------------------------------------
+   apply z-standarization
+   again do the outlier analysis
+   boxplo3 
+   ------------------------------------------
+   check boxplot1  vs boxplot3 
+   influential outlier or non influential
+
+============= Step-5(Multivariate analysis===
+1) Take target column as reference
+2) Perfrom some analysis of input variable with Target column
+3) 5 good insights
+4) Correlation: Numerical variables
+    Heat map
+    pick top2 postive related columns
+    pick top2 negative 
+
+5) For those max pos  and max neg draw scatter plots
+
+6) Heat maps and scatter plots put in PPT
+
+================= Step-6=====================
+Convert cat to numerical
+Lable encoder vs onehot coder
+
+================ Step-7====================
+Norm vs Stand 
+
+Max 10Pages in One PPT : 5min time to explain
+
+
+sir one question do we have to EDA on both train and test datasets or only train dataset?
+ML test

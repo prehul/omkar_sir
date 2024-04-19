@@ -1,0 +1,17 @@
+Object ==>  countplot
+number, integer ==> boxplot
+number, integer ==> Create the boxplot based on the target column 
+number, integer ==> histplot
+number, integer ==> histplot with target column
+Object ==>  countplot with target column
+object ==> histplot with target column
+object ==> with pie chart
+
+
+
+
+
+
+
+
+
