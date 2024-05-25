@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Interface</title>
+    <style>
+        #chat {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+        }
+        #input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <input id="input" type="text" placeholder="Type a command...">
+    <script>
+        document.getElementById('input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const command = e.target.value;  // Get the user input
+                handleCommand(command);  // Handle the command
+                e.target.value = '';  // Clear the input field
+            }
+        });
+
+        function handleCommand(command) {
+            // Send the command to the server
+            fetch('http://localhost:5000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: command })  // Send the user message as JSON
+            })
+            .then(response => response.json())  // Parse the JSON response
+            .then(data => {
+                const chat = document.getElementById('chat');  // Get the chat div
+                const aiMessage = data.response;  // Get the AI response from the JSON data
+
+                if (command.startsWith('load')) {
+                    const page = command.split(' ')[1];  // Extract the page name from the command
+                    fetch(`/${page}`)  // Fetch the HTML page
+                        .then(response => response.text())  // Get the page content as text
+                        .then(html => {
+                            chat.innerHTML += `<div>${html}</div>`;  // Add the HTML content to the chat
+                            chat.scrollTop = chat.scrollHeight;  // Scroll to the bottom of the chat
+                        });
+                } else {
+                    chat.innerHTML += `<div>${aiMessage}</div>`;  // Add the AI response to the chat
+                    chat.scrollTop = chat.scrollHeight;  // Scroll to the bottom of the chat
+                }
+            });
+        }
+    </script>
+</body>
+</html>
