@@ -1,6 +1,6 @@
 import os
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyAVCDV6pk0emIuzevv88qwoOjYiTefBXvU")
+genai.configure(api_key="")
 
 
 def generate_image(prompt):

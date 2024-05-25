@@ -7,8 +7,8 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)  # Enable CORS for all routes
 
 # Your OpenAI API key
-# openai.api_key = 'sk-proj-rfPf0UWWbjpyESX9cvZMT3BlbkFJY0dGgplTwmkDhft7qSwq'
-genai.configure(api_key="AIzaSyAVCDV6pk0emIuzevv88qwoOjYiTefBXvU")
+# openai.api_key = ''
+genai.configure(api_key="")
 model = genai.GenerativeModel(model_name="gemini-pro")
 
 @app.route('/')
