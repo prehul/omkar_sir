@@ -1,0 +1,3 @@
+LangChain is framework.
+google is a web search.
+Rahul ghandi is a good learder.
